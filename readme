@@ -1,0 +1,165 @@
+Rick & Morty WebApp — Full-Stack Assignment
+
+A full-stack Angular + .NET 9 application exploring Rick & Morty characters
+
+Overview
+
+This project is a full-stack web application built as part of a technical assignment.
+It fetches characters from the Rick & Morty API, allows search, filtering, and viewing detailed character information, including episodes, origin, and location.
+
+Tech Stack
+Frontend (Client)
+
+Angular 17+ (Stand-alone components)
+
+TypeScript
+
+RxJS
+
+HTML + CSS
+
+Backend (Server)
+
+.NET 9 Minimal API
+
+C#
+
+HttpClient
+
+CORS enabled
+
+📁 Project Structure
+rick-morty-webapp/
+│
+├── rick-morty-client/     # Angular frontend
+│   ├── src/app/
+│   │   ├── app.ts
+│   │   ├── app.config.ts
+│   │   ├── character.model.ts
+│   │   ├── character-service.ts
+│   │   ├── characters-page/
+│   │   └── character-details/
+│
+└── rick-morty-server/      # .NET backend
+    ├── Program.cs
+    └── Properties/
+
+Features
+Client-Side
+
+✔ Display list of all characters
+✔ Search by name
+✔ Filter by:
+
+Status
+
+Gender
+
+Species
+
+Type
+
+✔ Dynamic client-side filtering (updates instantly)
+✔ Character details page
+✔ Episode list (loaded in parallel)
+✔ Clean modular code + stand-alone components
+
+Server-Side
+
+✔ Proxy endpoint to external API
+✔ GET /api/character
+✔ CORS enabled
+✔ Easy to extend for more endpoints
+
+▶ How to Run the Project
+1. Run the Backend (.NET)
+cd rick-morty-server
+dotnet run
+
+
+Server runs at:
+
+http://localhost:5269
+
+
+Endpoints:
+
+GET /test
+
+GET /api/character
+
+GET /api/character/{id}
+
+2. Run the Frontend (Angular)
+cd rick-morty-client
+ng serve
+
+
+Client runs at:
+
+http://localhost:4200
+
+Architecture & Methodology
+1. Separation of Concerns
+
+Component → UI only
+
+Service → API calls + data access
+
+Model → Strong typing
+
+Routing → Navigation logic
+
+This keeps the code clean, testable, and readable.
+
+2. Reactive Programming with RxJS
+
+The service returns Observable streams
+
+Components subscribe and update UI reactively
+
+Episode loading uses forkJoin for parallel HTTP calls
+
+3. Standalone Components (Angular 17+)
+
+Eliminates heavy module structure.
+Each component declares its own imports → improves maintainability.
+
+Backend API Documentation
+GET /api/character
+
+Returns the full character response from Rick & Morty API.
+
+GET /api/character/{id}
+
+Returns one character by ID.
+
+GET /test
+
+Simple server connectivity check.
+
+Screenshots (if you want, add later)
+
+You can also add GIF or video (optional).
+
+Possible Improvements (Optional for submission)
+
+Favorites (localStorage)
+
+Pagination or infinite scroll
+
+Server-side caching
+
+Logging Middleware
+
+Persistent search history
+
+Skeleton loaders while fetching
+
+Error boundary components
+
+Author
+
+Ohad Goldberg
+Full-Stack Web Developer (Angular + .NET)
+Rick & Morty Full-Stack Assignment — StarNext
