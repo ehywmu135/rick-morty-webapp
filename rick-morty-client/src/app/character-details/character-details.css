@@ -1,0 +1,25 @@
+/* character-details.css */
+
+.character-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.character-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.character-info {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 20px;
+}

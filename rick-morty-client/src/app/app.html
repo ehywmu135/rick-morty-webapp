@@ -1,0 +1,67 @@
+<!-- app.html -->
+
+<h1>Rick & Morty Explorer</h1>
+
+<!-- Displays a static message from DemoService -->
+<p>Demo message: {{ message }}</p>
+
+<!-- Displays a test message from backend -->
+<p>Message from server: {{ serverMessage }}</p>
+
+<hr />
+
+<!-- ============================== -->
+<!--        Search Bar Input        -->
+<!-- ============================== -->
+
+<!--
+  [(ngModel)] enables two-way binding:
+  - When the user types, searchText is updated.
+  - When searchText updates, the input field also updates.
+
+  (input)="filterCharacters()" triggers the filter function
+  on every keystroke.(Two-way binding)
+-->
+<input
+  type="text"
+  placeholder="Search by name..."
+  [(ngModel)]="searchText"
+  (input)="filterCharacters()"
+  class="search-box"
+/>
+
+<!-- Display total characters shown after filtering -->
+<p>Total results: {{ filteredCharacters.length }}</p>
+
+<h2>Characters</h2>
+
+<!-- If we have characters, show them -->
+<div *ngIf="filteredCharacters.length > 0; else loading">
+
+  <!-- Grid container (styled via CSS) -->
+  <div class="characters-grid">
+
+    <!-- Loop through filtered characters -->
+    <div class="character-card" *ngFor="let c of filteredCharacters">
+
+      <!-- Character image -->
+      <img [src]="c.image" [alt]="c.name" class="character-image" />
+
+      <h3>{{ c.name }}</h3>
+
+      <p>
+        <strong>Status:</strong> {{ c.status }}<br />
+        <strong>Species:</strong> {{ c.species }}<br />
+        <strong>Type:</strong> {{ c.type || 'N/A' }}<br />
+        <strong>Gender:</strong> {{ c.gender }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Loading template shown before data arrives -->
+<ng-template #loading>
+  <p>Loading characters...</p>
+</ng-template>
+
+<router-outlet></router-outlet>

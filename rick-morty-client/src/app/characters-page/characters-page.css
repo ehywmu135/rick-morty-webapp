@@ -1,0 +1,49 @@
+/* characters-page.css */
+
+/* Basic page styling */
+h1 {
+  font-family: Arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  margin-top: 1.5rem;
+}
+
+/* Grid container for character cards */
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+/* Single character card */
+.character-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #c9f5e5;
+  box-shadow: 0 1px 3px rgba(179, 199, 118, 0.08);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Character image */
+.character-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.search-box {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  margin: 1rem 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+

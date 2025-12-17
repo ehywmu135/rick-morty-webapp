@@ -1,0 +1,13 @@
+# Angular
+client/node_modules/
+client/dist/
+client/.angular/
+
+# .NET
+server/bin/
+server/obj/
+server/.vs/
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,40 @@
+<!-- character-details.html -->
+
+<div *ngIf="isLoading">
+  <p>Loading character details...</p>
+</div>
+
+<div *ngIf="hasError">
+  <p>Failed to load character details.</p>
+</div>
+
+<div *ngIf="!isLoading && !hasError">
+
+  <div class="character-header">
+    <img [src]="character?.image" [alt]="character?.name" class="character-image" />
+
+    <div class="character-info">
+      <h1>{{ character?.name }}</h1>
+
+      <p>
+        <strong>Status:</strong> {{ character?.status }}<br />
+        <strong>Species:</strong> {{ character?.species }}<br />
+        <strong>Type:</strong> {{ character?.type || 'N/A' }}<br />
+        <strong>Gender:</strong> {{ character?.gender }}
+      </p>
+
+      <p>
+        <strong>Origin:</strong> {{ character?.origin?.name }}<br />
+        <strong>Location:</strong> {{ character?.location?.name }}
+      </p>
+    </div>
+  </div>
+
+  <h2>Episodes</h2>
+  <ul>
+    <li *ngFor="let e of episodes">
+      {{ e.episode }} - {{ e.name }}
+    </li>
+  </ul>
+
+</div>

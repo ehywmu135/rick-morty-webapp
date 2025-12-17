@@ -1,0 +1,109 @@
+<!-- characters-page.html -->
+
+<h1>Rick &amp; Morty Explorer</h1>
+
+<!-- Optional: show backend test message -->
+<p *ngIf="backendTestMessage">
+  Backend test: {{ backendTestMessage }}
+</p>
+
+<hr />
+
+<!-- ============================== -->
+<!--           Filters              -->
+<!-- ============================== -->
+
+<div class="filters-panel">
+
+  <!-- Name search -->
+  <input
+    type="text"
+    placeholder="Search by name..."
+    [(ngModel)]="searchText"
+    (input)="applyFilters()"
+    class="search-box"
+  />
+
+  <!-- Status filter -->
+  <label>
+    Status:
+    <select [(ngModel)]="statusFilter" (change)="applyFilters()">
+      <option value="All">All</option>
+      <option value="Alive">Alive</option>
+      <option value="Dead">Dead</option>
+      <option value="unknown">Unknown</option>
+    </select>
+  </label>
+
+  <!-- Species filter -->
+  <label>
+    Species:
+    <input
+      type="text"
+      [(ngModel)]="speciesFilter"
+      (input)="applyFilters()"
+    />
+  </label>
+
+  <!-- Type filter -->
+  <label>
+    Type:
+    <input
+      type="text"
+      [(ngModel)]="typeFilter"
+      (input)="applyFilters()"
+    />
+  </label>
+
+  <!-- Gender filter -->
+  <label>
+    Gender:
+    <select [(ngModel)]="genderFilter" (change)="applyFilters()">
+      <option value="All">All</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Genderless">Genderless</option>
+      <option value="unknown">Unknown</option>
+    </select>
+  </label>
+
+  <!-- Clear Filters button -->
+  <button type="button" (click)="clearAllFilters()">
+    Clear All Filters
+  </button>
+</div>
+
+<!-- Total results after applying filters -->
+<p>Total results: {{ filteredCharacters.length }}</p>
+
+<h2>Characters</h2>
+
+<!-- Show list or loading -->
+<div *ngIf="filteredCharacters.length > 0; else loading">
+
+  <div class="characters-grid">
+  <div
+    class="character-card"
+    *ngFor="let c of filteredCharacters"
+    (click)="goToDetails(c.id)"
+  >
+
+      <img [src]="c.image" [alt]="c.name" class="character-image" />
+
+      <h3>{{ c.name }}</h3>
+
+      <p>
+        <strong>Status:</strong> {{ c.status }}<br />
+        <strong>Species:</strong> {{ c.species }}<br />
+        <strong>Type:</strong> {{ c.type || 'N/A' }}<br />
+        <strong>Gender:</strong> {{ c.gender }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #loading>
+  <p>Loading characters...</p>
+</ng-template>
+
