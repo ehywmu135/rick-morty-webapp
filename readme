@@ -1,34 +1,51 @@
-Rick & Morty WebApp — Full-Stack Assignment
 
-A full-stack Angular + .NET 9 application exploring Rick & Morty characters
+# Rick & Morty Web App — Full-Stack Assignment
 
-Overview
+A full-stack web application built with **Angular** and **ASP.NET Core**, exploring characters from the Rick & Morty universe.
 
-This project is a full-stack web application built as part of a technical assignment.
-It fetches characters from the Rick & Morty API, allows search, filtering, and viewing detailed character information, including episodes, origin, and location.
+---
 
-Tech Stack
-Frontend (Client)
+## 🌐 Live Application
 
-Angular 17+ (Stand-alone components)
+The application is deployed and accessible online:
 
-TypeScript
+**https://rick-morty-webapp-edbkdzfqgmaybmbv.israelcentral-01.azurewebsites.net**
 
-RxJS
+No local setup is required to use the app.
 
-HTML + CSS
+---
 
-Backend (Server)
+## Overview
 
-.NET 9 Minimal API
+This project was developed as a full-stack technical assignment.
 
-C#
+The application consumes data from the public **Rick & Morty API**, allowing users to:
+- Browse characters
+- Search and filter results
+- View detailed information for each character, including origin, location, and episode appearances
 
-HttpClient
+The frontend and backend are served together as a single production-ready web application.
 
-CORS enabled
+---
 
-📁 Project Structure
+## Tech Stack
+
+### Frontend (Client)
+- Angular 17+ (Standalone Components)
+- TypeScript
+- RxJS
+- HTML & CSS
+
+### Backend (Server)
+- ASP.NET Core (.NET 9, Minimal API)
+- C#
+- HttpClient
+- CORS enabled
+
+---
+
+## Project Structure
+
 rick-morty-webapp/
 │
 ├── rick-morty-client/     # Angular frontend
@@ -71,16 +88,10 @@ Server-Side
 ✔ CORS enabled
 ✔ Easy to extend for more endpoints
 
-▶ How to Run the Project
+▶ How to Run the Project localy(optional)
 1. Run the Backend (.NET)
 cd rick-morty-server
 dotnet run
-
-
-Server runs at:
-
-http://localhost:5269
-
 
 Endpoints:
 
@@ -90,14 +101,9 @@ GET /api/character
 
 GET /api/character/{id}
 
-2. Run the Frontend (Angular)
+-Run the Frontend (Angular)
 cd rick-morty-client
 ng serve
-
-
-Client runs at:
-
-http://localhost:4200
 
 Architecture & Methodology
 1. Separation of Concerns
@@ -119,20 +125,6 @@ The service returns Observable streams
 Components subscribe and update UI reactively
 
 Episode loading uses forkJoin for parallel HTTP calls
-
-3. Standalone Components (Angular 17+)
-
-Eliminates heavy module structure.
-Each component declares its own imports → improves maintainability.
-
-Backend API Documentation
-GET /api/character
-
-Returns the full character response from Rick & Morty API.
-
-GET /api/character/{id}
-
-Returns one character by ID.
 
 
 Author
