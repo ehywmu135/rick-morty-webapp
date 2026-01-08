@@ -134,29 +134,6 @@ GET /api/character/{id}
 
 Returns one character by ID.
 
-GET /test
-
-Simple server connectivity check.
-
-Screenshots (if you want, add later)
-
-You can also add GIF or video (optional).
-
-Possible Improvements (Optional for submission)
-
-Favorites (localStorage)
-
-Pagination or infinite scroll
-
-Server-side caching
-
-Logging Middleware
-
-Persistent search history
-
-Skeleton loaders while fetching
-
-Error boundary components
 
 Author
 
