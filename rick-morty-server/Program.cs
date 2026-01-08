@@ -27,6 +27,16 @@ app.UseHttpsRedirection();
 
 app.UseCors();
 
+// 1. Allow serving default files like index.html
+app.UseDefaultFiles();
+
+// 2. Allow serving static files from wwwroot (JS, CSS, assets)
+app.UseStaticFiles();
+
+// 3. Fallback for Angular routing (SPA)
+app.MapFallbackToFile("index.html");
+
+
 app.MapGet("/api/character", async () =>
 {
     var http = new HttpClient();

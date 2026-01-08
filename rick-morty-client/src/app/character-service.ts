@@ -10,7 +10,7 @@ import { ApiCharacter, ApiCharacterResponse } from './character.model';
 })
 export class CharacterService {
 
-  private readonly baseUrl = 'http://localhost:5269/api/character';
+  private readonly baseUrl = '/api/character';
 
   constructor(private http: HttpClient) {}
 
@@ -34,6 +34,6 @@ export class CharacterService {
 
   // Optional: simple connectivity test
   test(): Observable<string> {
-    return this.http.get('http://localhost:5269/test', { responseType: 'text' });
+    return this.http.get('/test', { responseType: 'text' });
   }
 }

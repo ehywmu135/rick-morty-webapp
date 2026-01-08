@@ -1,13 +1,18 @@
-# Angular
-client/node_modules/
-client/dist/
-client/.angular/
+# ---- Angular ----
+rick-morty-client/node_modules/
+rick-morty-client/dist/
+rick-morty-client/.angular/
 
-# .NET
-server/bin/
-server/obj/
-server/.vs/
+# ---- .NET ----
+rick-morty-server/bin/
+rick-morty-server/obj/
+rick-morty-server/.vs/
 
-# System files
+# ---- Local publish output ----
+publish-rick-morty/
+
+# ---- System files ----
 .DS_Store
 Thumbs.db
+
+rick-morty-server/wwwroot/

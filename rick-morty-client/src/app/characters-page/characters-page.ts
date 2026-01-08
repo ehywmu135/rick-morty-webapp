@@ -54,10 +54,6 @@ export class CharactersPage implements OnInit {
   // Lifecycle hook: called once when the component is initialized.
   // Here we fetch all characters from the backend.
   ngOnInit(): void {
-    // Test backend connectivity (optional)
-    this.characterService.test().subscribe((data: string) => {
-      this.backendTestMessage = data;
-    });
 
     // Fetch all characters from the backend and initialize state
     this.characterService.getAllCharacters().subscribe((data) => {

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rick-morty-server", "rick-morty-server\rick-morty-server.csproj", "{5B0BF9E8-EA12-FAF5-5598-B5E0B3C07E60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B0BF9E8-EA12-FAF5-5598-B5E0B3C07E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0BF9E8-EA12-FAF5-5598-B5E0B3C07E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0BF9E8-EA12-FAF5-5598-B5E0B3C07E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0BF9E8-EA12-FAF5-5598-B5E0B3C07E60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F70CB204-46E5-4A2C-B7CF-712FD31831A6}
+	EndGlobalSection
+EndGlobal
