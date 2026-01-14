@@ -47,18 +47,31 @@ The frontend and backend are served together as a single production-ready web ap
 ## Project Structure
 
 rick-morty-webapp/
+
 │
+
 ├── rick-morty-client/     # Angular frontend
+
 │   ├── src/app/
+
 │   │   ├── app.ts
+
 │   │   ├── app.config.ts
+
 │   │   ├── character.model.ts
+
 │   │   ├── character-service.ts
+
 │   │   ├── characters-page/
+
 │   │   └── character-details/
+
 │
+
 └── rick-morty-server/      # .NET backend
+  
     ├── Program.cs
+    
     └── Properties/
 
 Features
@@ -130,5 +143,5 @@ Episode loading uses forkJoin for parallel HTTP calls
 Author
 
 Ohad Goldberg
-Full-Stack Web Developer (Angular + .NET)
-Rick & Morty Full-Stack Assignment — StarNext
+
+Full-Stack Web Developer 
