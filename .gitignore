@@ -16,3 +16,7 @@ publish-rick-morty/
 Thumbs.db
 
 rick-morty-server/wwwroot/
+
+# Publish output (generated)
+publish/
+publish-*.zip
