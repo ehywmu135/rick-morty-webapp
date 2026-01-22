@@ -20,3 +20,8 @@ rick-morty-server/wwwroot/
 # Publish output (generated)
 publish/
 publish-*.zip
+
+# Python
+rick-morty-python-server/.venv/
+__pycache__/
+*.pyc
